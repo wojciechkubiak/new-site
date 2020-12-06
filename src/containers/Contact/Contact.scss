@@ -1,0 +1,120 @@
+.contact {
+    height: auto;
+    width: auto;
+    position: relative;
+    background-color:#8e8dbc;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+}
+
+.contact-form {
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+    width: 40em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 50px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+
+}
+
+.contact-header {
+    // background: url("./../../images/29.jpg") no-repeat center center fixed; 
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    background-color: #8e8dbc;
+    margin-bottom: 5% !important;
+    padding: 50px !important;
+}
+
+.contact-header > h1, .contact-header > h3 {
+    text-align: center;
+    color: white
+}
+
+.contact-header > h1 {
+    letter-spacing: 5px;
+}
+
+.contact-header > h3 {
+    margin-top: 32px !important;
+    color: rgba(255, 255, 255, 0.8)
+}
+.contact-mail-mail, .contact-mail-subject {
+    text-align: center;
+}
+
+.contact-mail-mail, .contact-mail-subject, .contact-mail-content {
+    position: relative;
+    width: 100%;
+    border: 0 !important;
+    background-color: #ebebeb;
+    color: rgba(0, 0, 0, .6);
+    padding: 8px !important;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 5px !important;
+}
+
+.contact-mail-content {
+    height: 250px;
+}
+
+figure > h4 {
+    text-align: center;
+    margin-top: 20px !important;
+    color: rgba(0, 0, 0, .6);
+    margin-bottom: 8px !important;
+}
+
+.links-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 20%;
+    justify-content: center;
+    margin-top: 5%;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.links-container > a {
+    width: 33%;
+    height: auto;
+}
+
+.links-container > a > img {
+    position: relative;
+    max-width: 40%;
+    max-height: 40%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.submit-contact-form {
+    margin-top: 5% !important;
+    position: relative;
+    width: 50%;
+    padding: 8px !important;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    outline: none;
+    border: none !important;
+    color: rgba(0, 0, 0, .8);
+    background-color: white !important;
+    font-size: 16px;
+}
+
+.submit-contact-form:hover {
+    outline: none;
+    border: none !important;
+    color: rgba(0, 0, 0, .9)
+}

@@ -1,0 +1,84 @@
+{
+    "header": {
+        "home": "Strona Główna",
+        "about": "O MNIE",
+        "skills": "Technologie",
+        "projects": "Projekty",
+        "contact": "Kontakt"
+    },
+    "landing": {
+        "pos": "Student"
+    },
+    "aboutme": {
+        "header": "O mnie",
+        "greeting": "Cześć!",
+        "mynameis": "Nazywam się",
+        "content": "Jestem studentem Informatyki Stosowanej i Systemów Pomiarowych, UWr. Moją pasją jest tworzenie miłych dla oka aplikacji webowych z użyciem nowoczesnych technologii. Pasja ta została zapoczątkowana podczas licznych indywidualnych i studenckich projektów. W każdym z nich wykazałem się kreatywnością, konsekwencją oraz dbałością o jakość aplikacji i kodu. Podczas moich studiów miałem również okazję uczestniczyć w praktyce oraz stażu programistycznym. Podczas ich trwania nauczyłem się specyfiki pracy w systemie SCRUM, komunikacji z klientem podczas otrzymywania zlecenia oraz jak programować z zachowaniem nowoczesnych standardów."
+    },
+    "skills": {
+        "header": "Technologie"
+    },
+    "projects": {
+        "header": "Projekty",
+        "opqnAbout": "Aplikacja mobilna dla dietetyków",
+        "obbsysAbout": "Aplikacja webowa dla weterynarza",
+        "fittrackerAbout": "Aplikacja webowa dla dietetyków"
+    },
+    "contact": {
+        "header": "Kontakt",
+        "box": "Skontaktuj się",
+        "firstLine": "Jesteś zainteresowana/y pracą ze mną lub masz jakieś pytanie?",
+        "contactMe": "Napisz na adres:",
+        "or": "/",
+        "phone": "Zadzwoń:"
+    },
+    "footer": {
+        "text": "Strona stworzona przez"
+    },
+    "javascript": {
+        "1": "ES6+",
+        "2": "Modyfikacja DOM",
+        "3": "Programowanie Funkcyjne",
+        "4": "Programowanie Obiektowe",
+        "5": "Async"
+    },
+    "typescript": {
+        "1": "Konwersja ES6 na Typescript",
+        "2": "React Typescript"
+    },
+    "reactjs": {
+        "1": "React Hooks",
+        "2": "Programowanie Funkcyjne",
+        "3": "Programowanie Obiektowe"
+    },
+    "nodejs": {
+        "1": "ExpressJS",
+        "2": "REST API",
+        "3": "MVC",
+        "4": "Sequelize"
+    },
+    "html": {
+        "1": "Średnio-zaaw. składnia"
+    },
+    "css": {
+        "1": "CSS Grid",
+        "2": "Flexbox",
+        "3": "SASS",
+        "4": "Animacje"
+    },
+    "bootstrap": {
+        "1": "Użytkowanie",
+        "2": "Edycja"
+    },
+    "postgres": {
+        "1": "Podstawy",
+        "2": "GROUP BY / JOIN"
+    },
+    "download": {
+        "cv": "CV"
+    },
+    "tooltip": {
+        "info": "Więcej informacji po kliknięciu",
+        "copied": "Skopiowano!"
+    }
+}
