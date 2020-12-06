@@ -60,7 +60,7 @@
         "desc": "Użytkowanie,Edycja"
     },
     "postgres": {
-        "desc": "Podstawy,GROUP BY / JOIN"
+        "desc": "Podstawy,T-SQL"
     },
     "download": {
         "cv": "CV"

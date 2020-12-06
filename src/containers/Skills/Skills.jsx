@@ -5,7 +5,7 @@ import Angular from "./../../images/skills/white_empty_angular.png";
 import CSS from "./../../images/skills/white_empty_css.webp";
 import HTML5 from "./../../images/skills/white_empty_html.webp";
 import Javascript from "./../../images/skills/white_empty_js.webp";
-import SQL from "./../../images/skills/white_empty_sql.webp";
+import SQL from "./../../images/skills/white_empty_sql.png";
 import NodeJS from "./../../images/skills/white_empty_nodejs.webp";
 import ReactJS from "./../../images/skills/white_empty_react.webp";
 import Typescript from "./../../images/skills/white_empty_typescript.webp";
