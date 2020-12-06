@@ -1,11 +1,12 @@
 import React from "react";
 import "./Projects.scss";
 
-const Projects = () => {
+//TODO: Fill projects container
+const Projects = props => {
     return (
         <div className="projects">
             <div className="projects-header"><h1>PROJECTS</h1></div>
-            <div className="projects-mnt-bt" id="skills"></div>
+            <div ref={props.skillsRef} className="projects-mnt-bt" id="skills"></div>
         </div>
     )
 }

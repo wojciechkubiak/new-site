@@ -60,7 +60,7 @@ const Skills = props => {
                     })
                 }
             </div>
-            <div className="skills-mnt" id="contact"></div>
+            <div className="skills-mnt" id="contact" ref={props.contactRef}></div>
         </div>
     )
 }

@@ -1,15 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import "./Contact.scss";
 import axios from "axios";
 import ln from "./../../images/icons/linkedin.png";
 import fb from "./../../images/icons/facebook.png";
 import git from "./../../images/icons/git.png";
 
+//TODO: Fix CORS
 const Contact = props => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [content, setContent] = useState("");
-
+    
     const clearData = () => {
         setEmail("");
         setSubject("");
