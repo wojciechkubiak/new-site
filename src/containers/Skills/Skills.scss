@@ -1,5 +1,6 @@
 .skills {
     background-color:#696da3;
+    position: relative;
 }
 
 .skills-header {
@@ -13,4 +14,24 @@
     letter-spacing: 5px;
     background-color: #696da3;
     color: white
+}
+
+.skills-container {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px !important;
+    padding-bottom: 50px !important
+}
+
+.skills-mnt {
+    min-height: 40px;
+    min-width: 100%;
+    position: absolute;
+    background-image: url("./../../images/projects-mnt-cn.png");
+    bottom: 0px !important;
+    margin-bottom: 0 !important;
 }

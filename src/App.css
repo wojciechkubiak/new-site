@@ -20,3 +20,54 @@
     text-align: center;
     border-left: 1px solid white !important;
 }
+
+.navbar {
+    position: fixed;
+    left: 25px;
+    width: auto;
+    top: 50%;
+    display: block;
+    transform: translate(0%, -50%);
+}
+
+.navbar-item {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 32px;
+    height: 32px;
+    margin: 5px !important;
+    border-radius: 50% !important;
+    outline: none;
+    position: relative;
+}
+
+.navbar-item:hover {
+    border: 2px solid white;
+}
+
+.navbar-item-active {
+    border: 2px solid white;
+}
+
+.navbar > a {
+    outline: none;
+}
+
+.navbar-dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50% !important;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+    .language {
+        padding: 5px !important
+    }
+  }

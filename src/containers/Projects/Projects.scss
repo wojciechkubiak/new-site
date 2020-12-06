@@ -1,6 +1,8 @@
 .projects {
     background-color: #3e3b57;
     // height: 150px;
+    position: relative;
+    height: 50vh;
 }
 
 .projects-header {
@@ -14,4 +16,15 @@
     letter-spacing: 5px;
     background-color: #3e3b57;
     color: white
+}
+
+.projects-mnt-bt {
+    min-height: 40px;
+    min-width: 100%;
+    position: absolute;
+    background-image: url("./../../images/projects-mnt-bt.png");
+    bottom: 0px !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important
 }

@@ -27,10 +27,24 @@
 }
 
 .projects-mnt {
-    min-height: 120px;
+    min-height: 40px;
     min-width: 100%;
     position: absolute;
     background-image: url("./../../images/projects-mnt.png");
     bottom: 0px !important;
     margin-bottom: 0 !important;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .about-info {
+        background-color: white;
+        height: auto;
+        position: relative;
+    }
+
+    .about-info-content {
+        padding: 48px !important;
+        text-align: center;
+    }
+  }

@@ -26,53 +26,41 @@
     },
     "contact": {
         "header": "Contact",
-        "box": "Get in touch",
+        "box": "GET IN TOUCH",
         "firstLine": "Are you interested in working with me or just have a question?",
         "contactMe": "Email me at:",
         "or": "or",
-        "phone": "Call:"
+        "phone": "Call:",
+        "mail": "Mail",
+        "subject": "Subject",
+        "message": "Message"
     },
     "footer": {
         "text": "Created by"
     },
     "javascript": {
-        "1": "ES6+",
-        "2": "DOM Manipulation",
-        "3": "Functional Programming",
-        "4": "Objective Programming",
-        "5": "Async"
+        "desc": "ES6+,DOM Manipulation,Functional Programming,Objective Programming,Async"
     },
     "typescript": {
-        "1": "ES6 into Typescript conversion",
-        "2": "React implementation"
+        "desc": "ES6 into Typescript conversion,React implementation"
     },
     "reactjs": {
-        "1": "React Hooks",
-        "2": "Functional Programming",
-        "3": "Objective Programming"
+        "desc": "React Hooks,Functional Programming,Objective Programming"
     },
     "nodejs": {
-        "1": "ExpressJS",
-        "2": "REST API",
-        "3": "MVC",
-        "4": "Sequelize"
+        "desc": "ExpressJS,REST API,MVC,Sequelize"
     },
     "html": {
-        "1": "Semi-advanced syntax"
+        "desc": "Semi-advanced syntax"
     },
     "css": {
-        "1": "CSS Grid",
-        "2": "Flexbox",
-        "3": "SASS",
-        "4": "Animations"
+        "desc": "CSS Grid,Flexbox,SASS,Animations"
     },
     "bootstrap": {
-        "1": "Using",
-        "2": "Editing"
+        "desc": "Using,Editing"
     },
     "postgres": {
-        "1": "Fundamentals",
-        "2": "GROUP BY / JOIN"
+        "desc": "Fundamentals,GROUP BY / JOIN"
     },
     "download": {
         "cv": "RESUME"

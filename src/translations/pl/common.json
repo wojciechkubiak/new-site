@@ -26,53 +26,41 @@
     },
     "contact": {
         "header": "Kontakt",
-        "box": "Skontaktuj się",
+        "box": "SKONTAKTUJ SIĘ",
         "firstLine": "Jesteś zainteresowana/y pracą ze mną lub masz jakieś pytanie?",
         "contactMe": "Napisz na adres:",
         "or": "/",
-        "phone": "Zadzwoń:"
+        "phone": "Zadzwoń:",
+        "mail": "Email",
+        "subject": "Temat",
+        "message": "Wiadomość"
     },
     "footer": {
         "text": "Strona stworzona przez"
     },
     "javascript": {
-        "1": "ES6+",
-        "2": "Modyfikacja DOM",
-        "3": "Programowanie Funkcyjne",
-        "4": "Programowanie Obiektowe",
-        "5": "Async"
+        "desc": "ES6+,Modyfikacja DOM,Programowanie Funkcyjne,Programowanie Obiektowe,Async"
     },
     "typescript": {
-        "1": "Konwersja ES6 na Typescript",
-        "2": "React Typescript"
+        "desc": "Konwersja ES6 na Typescript,React Typescript"
     },
     "reactjs": {
-        "1": "React Hooks",
-        "2": "Programowanie Funkcyjne",
-        "3": "Programowanie Obiektowe"
+        "desc": "React Hooks,Programowanie Funkcyjne,Programowanie Obiektowe"
     },
     "nodejs": {
-        "1": "ExpressJS",
-        "2": "REST API",
-        "3": "MVC",
-        "4": "Sequelize"
+        "desc": "ExpressJS,REST API,MVC,Sequelize"
     },
     "html": {
-        "1": "Średnio-zaaw. składnia"
+        "desc": "Średnio-zaaw. składnia"
     },
     "css": {
-        "1": "CSS Grid",
-        "2": "Flexbox",
-        "3": "SASS",
-        "4": "Animacje"
+        "desc": "CSS Grid,Flexbox,SASS,Animacje"
     },
     "bootstrap": {
-        "1": "Użytkowanie",
-        "2": "Edycja"
+        "desc": "Użytkowanie,Edycja"
     },
     "postgres": {
-        "1": "Podstawy",
-        "2": "GROUP BY / JOIN"
+        "desc": "Podstawy,GROUP BY / JOIN"
     },
     "download": {
         "cv": "CV"

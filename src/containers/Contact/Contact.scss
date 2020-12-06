@@ -16,15 +16,9 @@
     transform: translate(-50%, 0%);
     padding: 50px !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-
 }
 
 .contact-header {
-    // background: url("./../../images/29.jpg") no-repeat center center fixed; 
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
     background-color: #8e8dbc;
     margin-bottom: 5% !important;
     padding: 50px !important;
@@ -101,7 +95,8 @@ figure > h4 {
 .submit-contact-form {
     margin-top: 5% !important;
     position: relative;
-    width: 50%;
+    width: 32px;
+    height: 32px;
     padding: 8px !important;
     text-align: center;
     left: 50%;
@@ -111,10 +106,39 @@ figure > h4 {
     color: rgba(0, 0, 0, .8);
     background-color: white !important;
     font-size: 16px;
+    background-image: url("./../../images/icons/send.png");
+    background-size: 100%; /* To fill the dimensions of container (button), or */
 }
 
 .submit-contact-form:hover {
     outline: none;
     border: none !important;
-    color: rgba(0, 0, 0, .9)
+    color: rgba(0, 0, 0, .9);
 }
+
+input:focus, textarea:focus {
+    border: 0 !important;
+    outline: none;
+}
+
+input:invalid {
+    box-shadow:none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .contact {
+        padding-top: 0% !important;
+        padding-bottom: 5% !important;
+    }
+    
+    .contact-form {
+        width: 80%;
+        padding: 24px !important
+    }
+    
+    .links-container > a > img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+  }

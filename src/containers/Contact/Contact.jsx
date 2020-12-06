@@ -35,8 +35,8 @@ const Contact = props => {
     return (
         <div className="contact">
            <div className="contact-header">
-               <h1>GET IN TOUCH</h1>
-               <h3>Are you interested in working with me or just have a question?</h3>
+               <h1>{props.t("contact.box", { framework: "react-i18next" })}</h1>
+               <h3>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>
            </div>
            <form className="contact-form" onSubmit={event => handleSubmit(event)}>
                 <div className="links-container">
@@ -45,18 +45,18 @@ const Contact = props => {
                     <a href="https://www.facebook.com/wojciechkubiakfb"><img src={fb}/></a>
                 </div>
                 <figure>
-                    <h4>Mail</h4>
+                    <h4>{props.t("contact.mail", { framework: "react-i18next" })}</h4>
                     <input type="text" className="contact-mail-mail" onChange={event => setEmail(event.target.value)} type="email" required/>
                 </figure>
                 <figure>
-                    <h4>Subject</h4>    
+                    <h4>{props.t("contact.subject", { framework: "react-i18next" })}</h4>    
                     <input type="text" className="contact-mail-subject" onChange={event => setSubject(event.target.value)} type="text" required/>
                 </figure>
                 <figure>
-                    <h4>Message</h4>
+                    <h4>{props.t("contact.message", { framework: "react-i18next" })}</h4>
                     <textarea type="text" className="contact-mail-content" onChange={event => setContent(event.target.value)}></textarea>
                 </figure>
-                <button className="submit-contact-form" type="submit">SEND</button>
+                <button className="submit-contact-form" type="submit"></button>
             </form>
         </div>
     )
