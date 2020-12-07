@@ -77,12 +77,13 @@ const App = props => {
         )}
       </div>
       <Name mainRef={mainRef} t={t} />
-      <About aboutRef={aboutRef} projectsRef={projectsRef} t={t} />
+      <About aboutRef={aboutRef} projectsRef={projectsRef} t={t} lang={lang}/>
       <Projects skillsRef={skillsRef} t={t} />
       <Skills contactRef={contactRef} t={t} />
       <Contact t={t} />
       <Footer t={t} />
       <div className="navbar">
+        {/* TODO: Change a -> button */}
         <a onClick={() => executeScroll(mainRef, true, false, false, false, false)}><div className={mainStyle}><div className="navbar-dot"></div></div></a>
         <a onClick={() => executeScroll(aboutRef, false, true, false, false, false)}><div className={aboutStyle}><div className="navbar-dot"></div></div></a>
         <a onClick={() => executeScroll(projectsRef, false, false, true, false, false)}><div className={projectsStyle}><div className="navbar-dot"></div></div></a>

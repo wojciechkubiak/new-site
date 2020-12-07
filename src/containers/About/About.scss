@@ -26,6 +26,18 @@
     padding: 32px !important;
 }
 
+.about-resume-link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.about-resume-link:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6) !important;
+}
+
 .projects-mnt {
     min-height: 40px;
     min-width: 100%;
@@ -48,3 +60,29 @@
         text-align: center;
     }
   }
+
+@media only screen and (max-width: 1580px) {
+    .about-info {
+        background-color: white;
+        height: auto;
+        position: relative;
+    }
+
+    .about-info-content {
+        padding: 48px !important;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-height: 800px){
+    .about-info {
+        background-color: white;
+        height: auto;
+        position: relative;
+    }
+
+    .about-info-content {
+        padding: 48px !important;
+        text-align: center;
+    }
+}

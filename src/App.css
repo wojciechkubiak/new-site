@@ -31,7 +31,7 @@
 }
 
 .navbar-item {
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid transparent;
     width: 32px;
     height: 32px;
     margin: 5px !important;
