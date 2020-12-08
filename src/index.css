@@ -29,3 +29,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@media only screen and (max-width: 600px) {
+  html { 
+    background: none;
+    background-color: #3e3b57;
+    margin: 0 !important;
+    scroll-behavior: smooth;
+  }
+}

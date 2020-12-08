@@ -24,8 +24,14 @@
 @media only screen and (max-width: 600px) {
     .about {
         height: 100vh;
+        background: url("./../../images/bg.jpg") no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     .about-header {
         font-size: 24px;
+        top: 40%;
     }
 }

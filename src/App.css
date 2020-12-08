@@ -84,6 +84,13 @@
         display: none;
     }
     .language {
-        padding: 5px !important
+        padding: 5px !important;
+        position: fixed;
+        top: 5px;
+        left: 5px;
+        z-index: 2000 !important
+    }
+    .App {
+        background-color: #3e3b57;
     }
   }
