@@ -1,4 +1,6 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useEffect} from "react";
+import { useInView } from 'react-intersection-observer';
+import { isMobile } from 'react-device-detect';
 import "./Contact.scss";
 import axios from "axios";
 import ln from "./../../images/icons/linkedin.png";
@@ -10,7 +12,24 @@ const Contact = props => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [content, setContent] = useState("");
-    
+    const [animated, setAnimated] = useState(false);
+    const { ref, inView, entry } = useInView({
+        threshold: .5,
+    });
+
+    useEffect(() => {
+        setAnimated(true);
+        if(inView && !isMobile) {
+            props.setNavbar(false, false, false, false, true);
+        }
+    }, [inView]);
+
+    useEffect(() => {
+        if(animated) {
+            // console.log('Anim here');
+        }
+    }, [animated]);
+
     const clearData = () => {
         setEmail("");
         setSubject("");
@@ -34,7 +53,7 @@ const Contact = props => {
       }
 
     return (
-        <div className="contact">
+        <div className="contact" ref={ref}>
            <div className="contact-header">
                <h1>{props.t("contact.box", { framework: "react-i18next" })}</h1>
                <h3>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>

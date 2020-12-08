@@ -8,7 +8,6 @@ import Skills from "./containers/Skills/Skills";
 import Contact from "./containers/Contact/Contact";
 import Footer from "./containers/Footer/Footer";
 
-//TODO: Handle buttons active / navbar on scroll position
 const App = props => {
   const { t, i18n } = props;
   const [lang, setLang] = useState("en");
@@ -19,7 +18,7 @@ const App = props => {
   const [projectsStyle, setProjectsStyle] = useState("navbar-item");
   const [skillsStyle, setSkillsStyle] = useState("navbar-item");
   const [contactStyle, setContactStyle] = useState("navbar-item");
-
+  const [navbarStyle, setNavbarStyle] = useState("navbar")
   const mainRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -65,6 +64,14 @@ const App = props => {
     }
   }
 
+  const navbarDarkHandler = (val) => {
+    if(val) {
+      setNavbarStyle("navbar navbar-dark")
+    } else {
+      setNavbarStyle("navbar");
+    }
+  }
+
   return (
     <div className="App" ref={mainRef}>
       <div className="language">
@@ -76,19 +83,17 @@ const App = props => {
           </>
         )}
       </div>
-      <Name mainRef={mainRef} t={t} />
-      <About aboutRef={aboutRef} projectsRef={projectsRef} t={t} lang={lang}/>
-      <Projects skillsRef={skillsRef} t={t} />
-      <Skills contactRef={contactRef} t={t} />
-      <Contact t={t} />
+      <Name mainRef={mainRef} setNavbar={setNavbar} t={t} />
+      <About projectsRef={projectsRef} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang}/>
+      <Projects skillsRef={skillsRef} setNavbar={setNavbar} t={t} />
+      <Skills contactRef={contactRef} setNavbar={setNavbar} t={t} />
+      <Contact setNavbar={setNavbar} t={t} />
       <Footer t={t} />
-      <div className="navbar">
-        {/* TODO: Change a -> button */}
-        <a onClick={() => executeScroll(mainRef, true, false, false, false, false)}><div className={mainStyle}><div className="navbar-dot"></div></div></a>
-        <a onClick={() => executeScroll(aboutRef, false, true, false, false, false)}><div className={aboutStyle}><div className="navbar-dot"></div></div></a>
-        <a onClick={() => executeScroll(projectsRef, false, false, true, false, false)}><div className={projectsStyle}><div className="navbar-dot"></div></div></a>
-        <a onClick={() => executeScroll(skillsRef, false, false, false, true, false)}><div className={skillsStyle}><div className="navbar-dot"></div></div></a>
-        <a onClick={() => executeScroll(contactRef, false, false, false, false, true)}><div className={contactStyle}><div className="navbar-dot"></div></div></a>
+      <div className={navbarStyle}>
+        <button onClick={() => executeScroll(mainRef, true, false, false, false, false)}><div className={mainStyle}><div className="navbar-dot"></div></div></button>
+        <button onClick={() => executeScroll(projectsRef, false, false, true, false, false)}><div className={projectsStyle}><div className="navbar-dot"></div></div></button>
+        <button onClick={() => executeScroll(skillsRef, false, false, false, true, false)}><div className={skillsStyle}><div className="navbar-dot"></div></div></button>
+        <button onClick={() => executeScroll(contactRef, false, false, false, false, true)}><div className={contactStyle}><div className="navbar-dot"></div></div></button>
       </div>
     </div>
   );

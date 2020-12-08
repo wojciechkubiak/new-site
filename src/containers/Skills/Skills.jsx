@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useInView } from 'react-intersection-observer';
+import { isMobile } from 'react-device-detect';
 import "./Skills.scss";
 import Skill from "./../../components/Skill/Skill";
 import Angular from "./../../images/skills/white_empty_angular.png";
@@ -45,9 +47,26 @@ const Skills = props => {
         skill: CSS,
         skillDesc: props.t("css.desc", { framework: "react-i18next" })
     }];
+    const [animated, setAnimated] = useState(false);
+    const { ref, inView, entry } = useInView({
+        threshold: .6,
+    });
+
+    useEffect(() => {
+        setAnimated(true);
+        if(inView && !isMobile) {
+            props.setNavbar(false, false, false, true, false)
+        }
+    }, [inView]);
+
+    useEffect(() => {
+        if(animated) {
+            // console.log('Anim here');
+        }
+    }, [animated]);
 
     return (
-        <div className="skills">
+        <div className="skills" ref={ref}>
             <div className="skills-header"><h1>SKILLS</h1></div>
             <div className="skills-container">
                 {

@@ -4,11 +4,10 @@ import "./Skill.scss";
 const Skill = (props) => {
     const [desc, setDesc] = useState([]);
 
-    useEffect(() => {
-        // const temp = props.skillDescription.split(',')
-        // setDesc(temp);
-        console.log(props.skillDescription);
-    }, []);
+    // useEffect(() => {
+    //     // const temp = props.skillDescription.split(',')
+    //     // setDesc(temp);
+    // }, []);
 
     return (
         <>

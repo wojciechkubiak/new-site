@@ -24,7 +24,7 @@
 .navbar {
     position: fixed;
     left: 25px;
-    width: auto;
+    height: auto;
     top: 50%;
     display: block;
     transform: translate(0%, -50%);
@@ -40,6 +40,10 @@
     position: relative;
 }
 
+.navbar-dark {
+    background-color: rgba(0, 0, 0, .5) !important;
+    border-radius: 5px !important;
+}
 .navbar-item:hover {
     border: 2px solid white;
 }
@@ -48,8 +52,13 @@
     border: 2px solid white;
 }
 
-.navbar > a {
+.navbar > button {
     outline: none;
+    background-color: transparent;
+    border: none !important;
+    position: relative;
+    display: block;
+
 }
 
 .navbar-dot {
