@@ -65,11 +65,11 @@ const App = props => {
   }
 
   const navbarDarkHandler = (val) => {
-    if(val) {
+    // if(val) {
       setNavbarStyle("navbar navbar-dark")
-    } else {
-      setNavbarStyle("navbar");
-    }
+    // } else {
+      // setNavbarStyle("navbar");
+    // }
   }
 
   return (

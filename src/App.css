@@ -41,15 +41,23 @@
 }
 
 .navbar-dark {
-    background-color: rgba(0, 0, 0, .5) !important;
-    border-radius: 5px !important;
+    background: url("./images/navbar.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .navbar-item:hover {
-    border: 2px solid white;
+    border: 2px solid#8e8dbc;
 }
 
 .navbar-item-active {
-    border: 2px solid white;
+    border: 2px solid #8e8dbc;
+    background: url("./images/active.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navbar > button {
@@ -66,7 +74,6 @@
     width: 4px;
     height: 4px;
     border-radius: 50% !important;
-    background-color: white;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

@@ -1,8 +1,9 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useRef} from "react";
 import { useInView } from 'react-intersection-observer';
 import { isMobile } from 'react-device-detect';
 import "./Contact.scss";
 import axios from "axios";
+import { gsap } from "gsap";
 import ln from "./../../images/icons/linkedin.png";
 import fb from "./../../images/icons/facebook.png";
 import git from "./../../images/icons/git.png";
@@ -17,16 +18,54 @@ const Contact = props => {
         threshold: .5,
     });
 
+    let contactHeader = useRef(null);
+    let contactSubHeader = useRef(null);
+    let contactForm = useRef(null);
+
     useEffect(() => {
-        setAnimated(true);
+        if(inView) setAnimated(true);
         if(inView && !isMobile) {
             props.setNavbar(false, false, false, false, true);
         }
     }, [inView]);
 
+
     useEffect(() => {
         if(animated) {
-            // console.log('Anim here');
+            gsap.fromTo(
+                contactHeader,
+                {
+                    opacity: 0
+                }, 
+                {
+                    duration: 1,
+                    opacity: 1
+                }
+            );
+
+            gsap.fromTo(
+                contactSubHeader,
+                {
+                    opacity: 0
+                }, 
+                {
+                    duration: 4,
+                    opacity: 1
+                }
+            )
+
+            gsap.fromTo(
+                contactForm,
+                {
+                    opacity: 0,
+                    bottom: -100
+                }, 
+                {
+                    duration: 1,
+                    bottom: 0,
+                    opacity: 1
+                }
+            )
         }
     }, [animated]);
 
@@ -55,10 +94,10 @@ const Contact = props => {
     return (
         <div className="contact" ref={ref}>
            <div className="contact-header">
-               <h1>{props.t("contact.box", { framework: "react-i18next" })}</h1>
-               <h3>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>
+               <h1 ref={e => contactHeader = e}>{props.t("contact.box", { framework: "react-i18next" })}</h1>
+               <h3 ref={e => contactSubHeader = e}>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>
            </div>
-           <form className="contact-form" onSubmit={event => handleSubmit(event)}>
+           <form className="contact-form" ref={e => contactForm = e} onSubmit={event => handleSubmit(event)}>
                 <div className="links-container">
                     <a href="https://www.linkedin.com/in/wojciechkubiakin"><img src={ln}/></a>
                     <a href="https://www.github.com/wojciechkubiak"><img src={git}/></a>

@@ -1,25 +1,25 @@
 {
     "header": {
-        "home": "Home",
+        "home": "HOME",
         "about": "ABOUT ME",
-        "skills": "Skills",
-        "projects": "Projects",
-        "contact": "Contact"
+        "skills": "SKILLS",
+        "projects": "PROJECTS",
+        "contact": "CONTACT"
     },
     "landing": {
         "pos": "Student"
     },
     "aboutme": {
-        "header": "About me",
+        "header": "ABOUT ME",
         "greeting": "Hi!",
         "mynameis": "My name is",
         "content": "I'm student of Computer Science and Measuring Systems at the University of Wroclaw. I am passionate about creating nice looking web applications using modern technologies. I got into it during numerous individual and university projects. In each of them I showed creativity, consistency and attention to the quality of the application and code. During my studies, I also had the opportunity to participate in practices and programming internships. During them I learned how to work in the SCRUM system, how to communicate with client while receiving an application creation order and how to program with modern standards. More information "
     },
     "skills": {
-        "header": "Skills"
+        "header": "SKILLS"
     },
     "projects": {
-        "header": "Projects",
+        "header": "PROJECTS",
         "opqnAbout": "Mobile app for the diet supervisors",
         "obbsysAbout": "Web app for the vet",
         "fittrackerAbout": "Web app for the diet supervisors"

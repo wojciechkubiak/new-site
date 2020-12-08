@@ -1,25 +1,25 @@
 {
     "header": {
-        "home": "Strona Główna",
+        "home": "STRONA GŁÓWNA",
         "about": "O MNIE",
-        "skills": "Technologie",
-        "projects": "Projekty",
-        "contact": "Kontakt"
+        "skills": "TECHNOLOGIE",
+        "projects": "PROJEKTY",
+        "contact": "KONTAKT"
     },
     "landing": {
         "pos": "Student"
     },
     "aboutme": {
-        "header": "O mnie",
+        "header": "O MNIE",
         "greeting": "Cześć!",
         "mynameis": "Nazywam się",
         "content": "Jestem studentem Informatyki Stosowanej i Systemów Pomiarowych, UWr. Moją pasją jest tworzenie miłych dla oka aplikacji webowych z użyciem nowoczesnych technologii. Pasja ta została zapoczątkowana podczas licznych indywidualnych i studenckich projektów. W każdym z nich wykazałem się kreatywnością, konsekwencją oraz dbałością o jakość aplikacji i kodu. Podczas moich studiów miałem również okazję uczestniczyć w praktyce oraz stażu programistycznym. Podczas ich trwania nauczyłem się specyfiki pracy w systemie SCRUM, komunikacji z klientem podczas otrzymywania zlecenia oraz jak programować z zachowaniem nowoczesnych standardów. Więcej informacji "
     },
     "skills": {
-        "header": "Technologie"
+        "header": "TECHNOLOGIE"
     },
     "projects": {
-        "header": "Projekty",
+        "header": "PROJEKTY",
         "opqnAbout": "Aplikacja mobilna dla dietetyków",
         "obbsysAbout": "Aplikacja webowa dla weterynarza",
         "fittrackerAbout": "Aplikacja webowa dla dietetyków"

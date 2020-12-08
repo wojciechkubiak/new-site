@@ -1,17 +1,30 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
+import { gsap } from "gsap";
 import "./Skill.scss";
 
 const Skill = (props) => {
-    const [desc, setDesc] = useState([]);
+    let skillRef = useRef(null);
 
-    // useEffect(() => {
-    //     // const temp = props.skillDescription.split(',')
-    //     // setDesc(temp);
-    // }, []);
+    useEffect(() => {
+        if(props.animated) {
+            let mtp = (props.id + 1) * 0.3;
+           
+            gsap.fromTo(
+                skillRef,
+                {
+                    opacity: 0
+                }, 
+                {
+                    duration: 1,
+                    opacity: 1
+                }
+            ).delay(mtp);
+        }
+    }, [props.animated]);
 
     return (
         <>
-            <figure>
+            <figure className="skill-figure" ref={e => skillRef = e}>
                 <img src={props.imgSrc} className="skill-img"/>
                 <figcaption>
                     <h3>{props.name}</h3>

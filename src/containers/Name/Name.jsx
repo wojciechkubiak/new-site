@@ -1,6 +1,7 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState, useRef} from "react";
 import { useInView } from 'react-intersection-observer';
 import { isMobile } from 'react-device-detect';
+import { gsap } from "gsap";
 import "./Name.scss";
 
 const Name = props => {
@@ -9,8 +10,10 @@ const Name = props => {
         threshold: .8,
     });
 
+    let headerRef = useRef(null);
+
     useEffect(() => {
-        setAnimated(true);
+        if(inView) setAnimated(true);
         if(inView && !isMobile) {
             props.setNavbar(true, false, false, false, false)
         }
@@ -18,13 +21,22 @@ const Name = props => {
 
     useEffect(() => {
         if(animated) {
-            // console.log('Anim here');
+            gsap.fromTo(
+                headerRef,
+                {
+                    opacity: 0
+                }, 
+                {
+                    duration: 1,
+                    opacity: 1
+                }
+            )
         }
     }, [animated]);
 
     return (
         <div className="about" ref={ref}>
-            <div className="about-header">
+            <div className="about-header" ref={(e) => (headerRef = e)}>
                 <h1>WOJCIECH KUBIAK</h1>
             </div>
         </div>
