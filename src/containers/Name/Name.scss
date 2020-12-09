@@ -3,6 +3,10 @@
     height: 70vh;
     width: 100%;
 }
+@font-face {
+    font-family: 'Leaf';
+    src: local('Leaf'), url(./../../fonts/Leaf.otf) format('opentype');
+}
 
 .about-header {
     color: white;

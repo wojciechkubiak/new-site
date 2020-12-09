@@ -11,7 +11,7 @@ const Projects = props => {
     const projects = [{ img: ObbSys, header: "OBBSYS"}, {img: OpqnWeb, header: "OPQN"}];
     const [animated, setAnimated] = useState(false);
     const { ref, inView, entry } = useInView({
-        threshold: .6,
+        threshold: .4,
     });
 
     let projectsHeader = useRef(null);
@@ -71,7 +71,7 @@ const Projects = props => {
             <div className="projects-header" ref={e => projectsHeader = e}><h1>{props.t("header.projects", { framework: "react-i18next" })}</h1></div>
             <div className="projects-data" ref={e => projectsFirst = e}>
                 <div className="projects-img-container">
-                    <img alt="alt" className="projects-img" src={projects[0].img} />
+                    <span className="helper"></span><img alt="alt" className="projects-img" src={projects[0].img} />
                 </div>
                 <div className="projects-info">
                     <h2>{projects[0].header}</h2>

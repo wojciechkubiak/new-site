@@ -14,6 +14,7 @@ const Contact = props => {
     const [subject, setSubject] = useState("");
     const [content, setContent] = useState("");
     const [animated, setAnimated] = useState(false);
+    const [inputDisabled, setInputDisabled] = useState(false);
     const { ref, inView, entry } = useInView({
         threshold: .5,
     });
@@ -77,7 +78,8 @@ const Contact = props => {
 
     const handleSubmit = event => {
         event.preventDefault();
-    
+        setInputDisabled(true);
+
         const mail = {
           mail: email,
           subject: subject,
@@ -91,6 +93,10 @@ const Contact = props => {
             console.log(res);
             console.log(res.data);
             clearData();
+            setInputDisabled(false);
+          }).catch(error => {
+              console.log(error);
+              setInputDisabled(false);
           })
       }
 
@@ -108,15 +114,15 @@ const Contact = props => {
                 </div>
                 <figure>
                     <h4>{props.t("contact.mail", { framework: "react-i18next" })}</h4>
-                    <input type="text" className="contact-mail-mail" onChange={event => setEmail(event.target.value)} type="email" value={email} required/>
+                    <input type="text" className="contact-mail-mail" onChange={event => setEmail(event.target.value)} type="email" value={email} disabled={inputDisabled} required/>
                 </figure>
                 <figure>
                     <h4>{props.t("contact.subject", { framework: "react-i18next" })}</h4>    
-                    <input type="text" className="contact-mail-subject" onChange={event => setSubject(event.target.value)} type="text" value={subject} required/>
+                    <input type="text" className="contact-mail-subject" onChange={event => setSubject(event.target.value)} type="text" value={subject} disabled={inputDisabled} required/>
                 </figure>
                 <figure>
                     <h4>{props.t("contact.message", { framework: "react-i18next" })}</h4>
-                    <textarea type="text" className="contact-mail-content" onChange={event => setContent(event.target.value)} value={content} required></textarea>
+                    <textarea type="text" className="contact-mail-content" onChange={event => setContent(event.target.value)} value={content} disabled={inputDisabled} required></textarea>
                 </figure>
                 <button className="submit-contact-form" type="submit"></button>
             </form>
