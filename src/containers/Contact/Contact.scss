@@ -128,7 +128,7 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-input:invalid {
+input:invalid, textarea:invalid {
     box-shadow:none;
 }
 
