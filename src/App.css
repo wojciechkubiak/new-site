@@ -1,17 +1,23 @@
 .language-btn-show, .language-btn-pick {
     border: 0 !important;
-    background-color: transparent;
     outline: none;
-    margin-left: 2px;
-    margin-top: 2px;
+    right: 25px;
+    bottom: 25px;
+    position: fixed;
+    z-index: 2000;
 }
 
 .language-btn-show {
     font-size: 16px;
     color: white;
-    border-bottom: 1px solid white !important;
-    width: 160px;
-    padding: 4px !important
+    width: 60px;
+    padding: 2px !important;
+    background-color:transparent;
+    border-bottom: none !important;
+}
+
+.language-btn-show > img {
+    max-width: 100% !important;
 }
 
 .language-btn-pick {
@@ -52,7 +58,7 @@
 }
 
 .navbar-item-active {
-    border: 2px solid #8e8dbc;
+    /* border: 2px solid #8e8dbc; */
     background: url("./images/active.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -88,9 +94,24 @@
         position: fixed;
         top: 5px;
         left: 5px;
-        z-index: 2000 !important
+        z-index: 2000 !important;
+    }
+
+    .language-btn-show, .language-btn-pick {
+        border: 0 !important;
+        outline: none;
+        top: 5px;
+        left: 5px;
+        position: fixed;
+        z-index: 2000;
+        height: 55px
     }
     .App {
         background-color: #3e3b57;
+    }
+    
+    .language-btn-show > img {
+        max-height: 100% !important;
+        max-width: 100% !important;
     }
   }

@@ -7,6 +7,8 @@ import Projects from "./containers/Projects/Projects";
 import Skills from "./containers/Skills/Skills";
 import Contact from "./containers/Contact/Contact";
 import Footer from "./containers/Footer/Footer";
+import PolishFlag from "./images/pl.png";
+import UKFlag from "./images/en.png";
 
 const App = props => {
   const { t, i18n } = props;
@@ -18,7 +20,8 @@ const App = props => {
   const [projectsStyle, setProjectsStyle] = useState("navbar-item");
   const [skillsStyle, setSkillsStyle] = useState("navbar-item");
   const [contactStyle, setContactStyle] = useState("navbar-item");
-  const [navbarStyle, setNavbarStyle] = useState("navbar")
+  const [navbarStyle, setNavbarStyle] = useState("navbar");
+  const [flag, setFlag] = useState(PolishFlag);
   const mainRef = useRef(null);
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -39,9 +42,15 @@ const App = props => {
     setNavbar(true, false, false, false, false);
   }, []);
 
-  const langHandler = (language) => {
-    setLang(language);
-    setShowLangOptions(false);
+  const langHandler = () => {
+    if(lang === 'en') {
+      setFlag(UKFlag);
+      setLang('pl');
+    } else {
+      setFlag(PolishFlag)
+      setLang('en');
+    }
+    // setShowLangOptions(false);
   };
 
   const showLanguages = () => {
@@ -75,13 +84,13 @@ const App = props => {
   return (
     <div className="App" ref={mainRef}>
       <div className="language">
-        <button onClick={() => showLanguages()} className="language-btn-show">{lang.toUpperCase()}</button>
-        {showLangOptions && (
+        <button onClick={() => langHandler()} className="language-btn-show"><img alt="alt" src={flag}/></button>
+        {/* {showLangOptions && (
           <>
             <button onClick={() => langHandler("pl")} className="language-btn-pick">PL</button>
             <button onClick={() => langHandler("en")} className="language-btn-pick">EN</button>
           </>
-        )}
+        )} */}
       </div>
       <Name mainRef={mainRef} setNavbar={setNavbar} t={t} />
       <About projectsRef={projectsRef} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang}/>
