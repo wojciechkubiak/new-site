@@ -11,7 +11,7 @@ const About = props => {
     const [resume, setResume] = useState(ResumeEN);
     const [animated, setAnimated] = useState(false);
     const { ref, inView, entry } = useInView({
-        threshold: .8,
+        threshold: .5,
     });
     
     let aboutHeaderRef = useRef(null);
