@@ -35,10 +35,11 @@
 .projects-data {
     position: relative;
     width: 40%;
-    left: 30%;
-    margin-bottom: 55px !important;
-    margin-top: 55px !important;
+    margin-bottom: 125px !important;
+    margin-top: 125px !important;
     border-radius: 5px !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
     // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
@@ -52,6 +53,15 @@
     height: auto;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.projects-data-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .helper {
@@ -80,11 +90,13 @@
     padding: 10px !important
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 890px) {
     .projects-data {
         width: 90%;
-        left: 5%;
+        left: 0%;
         background-color: #696da3;
+        margin-bottom: 55px !important;
+        margin-top: 55px !important;
     }
 
     .projects-img-container {
@@ -103,6 +115,15 @@
         text-align: center;
         position: relative;
     }
+
+    .projects-data-container {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        left: 10%;
+        display: flex;
+    }
+
     
 }
 

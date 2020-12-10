@@ -69,20 +69,22 @@ const Projects = props => {
     return (
         <div className="projects" ref={ref}>
             <div className="projects-header" ref={e => projectsHeader = e}><h1>{props.t("header.projects", { framework: "react-i18next" })}</h1></div>
-            <div className="projects-data" ref={e => projectsFirst = e}>
-                <div className="projects-img-container">
-                    <span className="helper"></span><img alt="alt" className="projects-img" src={projects[0].img} />
+            <div className="projects-data-container">
+                <div className="projects-data" ref={e => projectsFirst = e}>
+                    <div className="projects-img-container">
+                        <span className="helper"></span><img alt="alt" className="projects-img" src={projects[0].img} />
+                    </div>
+                    <div className="projects-info">
+                        <h2>{projects[0].header}</h2>
+                    </div>
                 </div>
-                <div className="projects-info">
-                    <h2>{projects[0].header}</h2>
-                </div>
-            </div>
-            <div className="projects-data" ref={e => projectsSecond = e}>
-                <div className="projects-img-container">
-                    <img alt="alt" className="projects-img" src={projects[1].img} />
-                </div>
-                <div className="projects-info">
-                    <h2>{projects[1].header}</h2>
+                <div className="projects-data" ref={e => projectsSecond = e}>
+                    <div className="projects-img-container">
+                        <img alt="alt" className="projects-img" src={projects[1].img} />
+                    </div>
+                    <div className="projects-info">
+                        <h2>{projects[1].header}</h2>
+                    </div>
                 </div>
             </div>
             <div ref={props.skillsRef} className="projects-mnt-bt" id="skills"></div>
