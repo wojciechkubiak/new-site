@@ -40,10 +40,10 @@ const Skill = (props) => {
                     duration: 1,
                     opacity: 1
                 }
-            ).delay(mtp).then(
-                () => {if(isMobile) showFigcatpion()}               
-                );
+            ).delay(mtp)
         }
+        if(isMobile) showFigcatpion();
+        
     console.log(rand);
     }, [props.animated]);
 
