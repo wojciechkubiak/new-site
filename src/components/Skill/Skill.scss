@@ -12,10 +12,11 @@
     max-height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    margin-bottom: 10px !important;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
     font-size: 16px;
     text-align: center;
-    color: white;
+    color:rgba(0, 0, 0, 0.6) !important;
 }
 
 .skills-container > figure {
@@ -23,15 +24,32 @@
     margin-bottom: 30px !important
 }
 
+.skill-figure > figcaption {
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+.skill-desc-container {
+    color: rgba(0, 0, 0, 0.6) !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-size: 12px;
+    // background-image: url("./../../images/skillcd.png"); 
+    background-size: 100% 100%
+}
+
 figcaption > h3 {
-    color: white;
+    color: rgba(255, 255, 255, .8);
     letter-spacing: 2px;
     text-align: center;
     margin-bottom: 10px !important;
+    // padding-top: 5px !important;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
 }
 
 .skill-figure {
     opacity: 0;
+    height: 100%;
 }

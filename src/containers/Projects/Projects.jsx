@@ -119,7 +119,7 @@ const Projects = props => {
                     </div>
                 </div>
                 <div className="projects-data" ref={e => projectsSecond = e}>
-                <div className="projects-img-container" onClick={() => showHandler(setShowSecondInfo)}>
+                <div className="projects-img-container" onMouseOver={() => showHandler(setShowSecondInfo)} onClick={() => showHandler(setShowSecondInfo)}>
                         {showSecondInfo && (
                             <div className="projects-over-info">
                                 <div className="projects-over-info-git">
