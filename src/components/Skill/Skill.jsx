@@ -15,6 +15,9 @@ const Skill = (props) => {
     let style1 = {visibility: "hidden", opacity: 0, backgroundImage: `url(${Cloud1})`}
     let style2 = {visibility: "hidden", opacity: 0, backgroundImage: `url(${Cloud2})`}
     let style3 = {visibility: "hidden", opacity: 0, backgroundImage: `url(${Cloud3})`}
+    let styleMobile1 = {backgroundImage: `url(${Cloud1})`}
+    let styleMobile2 = {backgroundImage: `url(${Cloud2})`}
+    let styleMobile3 = {backgroundImage: `url(${Cloud3})`}
 
     let style = () => {
         switch(rand) {
@@ -24,6 +27,17 @@ const Skill = (props) => {
                 return style2
             case 2:
                 return style3
+        }
+    }
+
+    let styleMobile = () => {
+        switch(rand) {
+            case 0:
+                return styleMobile1
+            case 1:
+                return styleMobile2
+            case 2:
+                return styleMobile3
         }
     }
 
@@ -43,7 +57,7 @@ const Skill = (props) => {
             ).delay(mtp)
         }
         if(isMobile) showFigcatpion();
-        
+
     console.log(rand);
     }, [props.animated]);
 
@@ -85,7 +99,7 @@ const Skill = (props) => {
                 <img src={props.imgSrc}  onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()} className="skill-img"/>
                 <figcaption>
                     <h3 onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()}>{props.name}</h3>
-                    <div className="skill-desc-container" ref={e => figcaptionRef = e}  style={style()}>
+                    <div className="skill-desc-container" ref={e => figcaptionRef = e}  style={isMobile ? styleMobile() : style()}>
                     <div className="desc-container">
                     {props.skillDescription.map(element => {
                         return <>
