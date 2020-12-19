@@ -108,14 +108,14 @@ const Skill = (props) => {
                             {props.skillDescription.map(element => {
                                 return <>
                                     <p className="skill-desc">{element}</p>
-                                    <div style={{ position: "absolute", borderBottom: "2px solid #696da3", transform: `rotate(${randBoolean ? "-1" : "1"}deg)`, width: "100%" }}></div>
+                                    {/* <div style={{ position: "absolute", borderBottom: "2px solid #696da3", transform: `rotate(${randBoolean ? "-1" : "1"}deg)`, width: "100%" }}></div>
                                     <div style={{ position: "absolute", borderBottom: "4px solid #696da3", transform: `rotate(${randBoolean ? 0.5 * -1 : 0.5 * 1}deg)`, width: "100%" }}></div>
-                                    <div style={{ position: "absolute", borderBottom: "3px solid #696da3", transform: `rotate(${randBoolean ? 2 * -1 : 2 * 1}deg)`, width: "100%" }}></div>
+                                    <div style={{ position: "absolute", borderBottom: "3px solid #696da3", transform: `rotate(${randBoolean ? 2 * -1 : 2 * 1}deg)`, width: "100%" }}></div> */}
                                 </>
                             })}
                         </div>
                     </div>
-                    <div style={{ position: "absolute", height: "10px", width: "100%", bottom: "0px", left: "0px", backgroundColor: " #696da3" }}></div>
+                    {/* <div style={{ position: "absolute", height: "10px", width: "100%", bottom: "0px", left: "0px", backgroundColor: " #696da3" }}></div> */}
                 </figcaption>
             </figure>
         </>
