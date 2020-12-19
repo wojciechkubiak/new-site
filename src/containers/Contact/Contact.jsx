@@ -103,7 +103,7 @@ const Contact = props => {
     return (
         <div className="contact" ref={ref}>
             <div className="contact-header">
-                <h1 ref={e => contactHeader = e}>{props.t("contact.box", { framework: "react-i18next" })}</h1>
+                <h1 className="contact-header-text" ref={e => contactHeader = e}>{props.t("contact.box", { framework: "react-i18next" })}</h1>
                 <h3 ref={e => contactSubHeader = e}>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>
             </div>
             <form className="contact-form" ref={e => contactForm = e} onSubmit={event => handleSubmit(event)}>

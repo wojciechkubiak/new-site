@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Leaf';
+    src: local('Leaf'), url(./../../fonts/Leaf.otf) format('opentype');
+}
+
 .contact {
     height: auto;
     width: auto;
@@ -8,15 +13,23 @@
 }
 
 .contact-form {
-    background-color: white;
+    // background-color: white;
+    background-image: url("./../../images/contact.png");
+    background-size: 100% 100%;
     position: relative;
     border-radius: 5px;
     width: 40em;
     left: 50%;
     transform: translate(-50%, 0%);
     padding: 50px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
     opacity: 0
+}
+
+.contact-header-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
 }
 
 .contact-header {
