@@ -35,8 +35,11 @@
         background-size: cover;
     }
     .about-header {
-        font-size: 24px;
         top: 40%;
+    }
+
+    .about-header > h1 {
+        font-size: 56px;
     }
 }
 

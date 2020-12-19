@@ -8,8 +8,8 @@ import Projects from "./containers/Projects/Projects";
 import Skills from "./containers/Skills/Skills";
 import Contact from "./containers/Contact/Contact";
 import Footer from "./containers/Footer/Footer";
-import PolishFlag from "./images/pl.png";
-import UKFlag from "./images/en.png";
+import PolishFlag from "./images/plf.png";
+import UKFlag from "./images/enf.png";
 
 const App = props => {
   const { t, i18n } = props;
