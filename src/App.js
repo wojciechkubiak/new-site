@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useEffect, useState, useRef } from "react";
 import { withTranslation } from "react-i18next";
+import { isMobile } from 'react-device-detect';
 import Name from "./containers/Name/Name";
 import About from "./containers/About/About";
 import Projects from "./containers/Projects/Projects";
@@ -43,14 +44,13 @@ const App = props => {
   }, []);
 
   const langHandler = () => {
-    if(lang === 'en') {
+    if (lang === 'en') {
       setFlag(UKFlag);
       setLang('pl');
     } else {
       setFlag(PolishFlag)
       setLang('en');
     }
-    // setShowLangOptions(false);
   };
 
   const showLanguages = () => {
@@ -74,36 +74,31 @@ const App = props => {
   }
 
   const navbarDarkHandler = (val) => {
-    // if(val) {
-      setNavbarStyle("navbar navbar-dark")
-    // } else {
-      // setNavbarStyle("navbar");
-    // }
+    setNavbarStyle("navbar navbar-dark")
   }
 
   return (
     <div className="App" ref={mainRef}>
       <div className="language">
-        <button onClick={() => langHandler()} className="language-btn-show"><img alt="alt" src={flag}/></button>
-        {/* {showLangOptions && (
-          <>
-            <button onClick={() => langHandler("pl")} className="language-btn-pick">PL</button>
-            <button onClick={() => langHandler("en")} className="language-btn-pick">EN</button>
-          </>
-        )} */}
+        <button onClick={() => langHandler()} className="language-btn-show"><img alt="alt" src={flag} /></button>
       </div>
       <Name mainRef={mainRef} setNavbar={setNavbar} t={t} />
-      <About projectsRef={projectsRef} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang}/>
+      <About projectsRef={projectsRef} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang} />
       <Projects skillsRef={skillsRef} setNavbar={setNavbar} t={t} />
       <Skills contactRef={contactRef} setNavbar={setNavbar} t={t} />
       <Contact setNavbar={setNavbar} t={t} />
       <Footer t={t} />
-      <div className={navbarStyle}>
-        <button onClick={() => executeScroll(mainRef, true, false, false, false, false)}><div className={mainStyle}><div className="navbar-dot"></div></div></button>
-        <button onClick={() => executeScroll(projectsRef, false, false, true, false, false)}><div className={projectsStyle}><div className="navbar-dot"></div></div></button>
-        <button onClick={() => executeScroll(skillsRef, false, false, false, true, false)}><div className={skillsStyle}><div className="navbar-dot"></div></div></button>
-        <button onClick={() => executeScroll(contactRef, false, false, false, false, true)}><div className={contactStyle}><div className="navbar-dot"></div></div></button>
-      </div>
+      {!isMobile
+        &&
+        (
+          <div className={navbarStyle}>
+            <button onClick={() => executeScroll(mainRef, true, false, false, false, false)}><div className={mainStyle}><div className="navbar-dot"></div></div></button>
+            <button onClick={() => executeScroll(projectsRef, false, false, true, false, false)}><div className={projectsStyle}><div className="navbar-dot"></div></div></button>
+            <button onClick={() => executeScroll(skillsRef, false, false, false, true, false)}><div className={skillsStyle}><div className="navbar-dot"></div></div></button>
+            <button onClick={() => executeScroll(contactRef, false, false, false, false, true)}><div className={contactStyle}><div className="navbar-dot"></div></div></button>
+          </div>
+        )
+      }
     </div>
   );
 }

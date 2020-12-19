@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useInView } from 'react-intersection-observer';
 import { isMobile } from 'react-device-detect';
 import "./Contact.scss";
@@ -24,20 +24,20 @@ const Contact = props => {
     let contactForm = useRef(null);
 
     useEffect(() => {
-        if(inView) setAnimated(true);
-        if(inView && !isMobile) {
+        if (inView) setAnimated(true);
+        if (inView && !isMobile) {
             props.setNavbar(false, false, false, false, true);
         }
     }, [inView]);
 
 
     useEffect(() => {
-        if(animated) {
+        if (animated) {
             gsap.fromTo(
                 contactHeader,
                 {
                     opacity: 0
-                }, 
+                },
                 {
                     duration: 1,
                     opacity: 1
@@ -48,7 +48,7 @@ const Contact = props => {
                 contactSubHeader,
                 {
                     opacity: 0
-                }, 
+                },
                 {
                     duration: 4,
                     opacity: 1
@@ -60,7 +60,7 @@ const Contact = props => {
                 {
                     opacity: 0,
                     bottom: -100
-                }, 
+                },
                 {
                     duration: 1,
                     bottom: 0,
@@ -81,44 +81,44 @@ const Contact = props => {
         setInputDisabled(true);
 
         const mail = {
-          mail: email,
-          subject: subject,
-          content: content
+            mail: email,
+            subject: subject,
+            content: content
         };
-    
+
         console.log(mail);
-        
+
         axios.post(`https://portolio-email-sender.herokuapp.com/`, { mail })
-          .then(res => {
-            console.log(res);
-            console.log(res.data);
-            clearData();
-            setInputDisabled(false);
-          }).catch(error => {
-              console.log(error);
-              setInputDisabled(false);
-          })
-      }
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                clearData();
+                setInputDisabled(false);
+            }).catch(error => {
+                console.log(error);
+                setInputDisabled(false);
+            })
+    }
 
     return (
         <div className="contact" ref={ref}>
-           <div className="contact-header">
-               <h1 ref={e => contactHeader = e}>{props.t("contact.box", { framework: "react-i18next" })}</h1>
-               <h3 ref={e => contactSubHeader = e}>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>
-           </div>
-           <form className="contact-form" ref={e => contactForm = e} onSubmit={event => handleSubmit(event)}>
+            <div className="contact-header">
+                <h1 ref={e => contactHeader = e}>{props.t("contact.box", { framework: "react-i18next" })}</h1>
+                <h3 ref={e => contactSubHeader = e}>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>
+            </div>
+            <form className="contact-form" ref={e => contactForm = e} onSubmit={event => handleSubmit(event)}>
                 <div className="links-container">
-                    <a href="https://www.linkedin.com/in/wojciechkubiakin"><img src={ln}/></a>
-                    <a href="https://www.github.com/wojciechkubiak"><img src={git}/></a>
-                    <a href="https://www.facebook.com/wojciechkubiakfb"><img src={fb}/></a>
+                    <a href="https://www.linkedin.com/in/wojciechkubiakin"><img src={ln} /></a>
+                    <a href="https://www.github.com/wojciechkubiak"><img src={git} /></a>
+                    <a href="https://www.facebook.com/wojciechkubiakfb"><img src={fb} /></a>
                 </div>
                 <figure>
                     <h4>{props.t("contact.mail", { framework: "react-i18next" })}</h4>
-                    <input type="text" className="contact-mail-mail" onChange={event => setEmail(event.target.value)} type="email" value={email} disabled={inputDisabled} required/>
+                    <input type="text" className="contact-mail-mail" onChange={event => setEmail(event.target.value)} type="email" value={email} disabled={inputDisabled} required />
                 </figure>
                 <figure>
-                    <h4>{props.t("contact.subject", { framework: "react-i18next" })}</h4>    
-                    <input type="text" className="contact-mail-subject" onChange={event => setSubject(event.target.value)} type="text" value={subject} disabled={inputDisabled} required/>
+                    <h4>{props.t("contact.subject", { framework: "react-i18next" })}</h4>
+                    <input type="text" className="contact-mail-subject" onChange={event => setSubject(event.target.value)} type="text" value={subject} disabled={inputDisabled} required />
                 </figure>
                 <figure>
                     <h4>{props.t("contact.message", { framework: "react-i18next" })}</h4>

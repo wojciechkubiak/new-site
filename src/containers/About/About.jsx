@@ -13,22 +13,22 @@ const About = props => {
     const { ref, inView, entry } = useInView({
         threshold: .5,
     });
-    
+
     let aboutHeaderRef = useRef(null);
     let aboutContentRef = useRef(null);
 
     useEffect(() => {
-        if(inView) setAnimated(true);
-        if(!isMobile) props.navbarDarkHandler(inView);
+        if (inView) setAnimated(true);
+        if (!isMobile) props.navbarDarkHandler(inView);
     }, [inView]);
 
     useEffect(() => {
-        if(animated) {
+        if (animated) {
             gsap.fromTo(
                 aboutHeaderRef,
                 {
                     opacity: 0
-                }, 
+                },
                 {
                     duration: 1,
                     opacity: 1
@@ -39,7 +39,7 @@ const About = props => {
                 aboutContentRef,
                 {
                     opacity: 0
-                }, 
+                },
                 {
                     duration: 1.5,
                     opacity: 1
@@ -49,7 +49,7 @@ const About = props => {
     }, [animated]);
 
     useEffect(() => {
-        if(props.lang === "pl") {
+        if (props.lang === "pl") {
             setResume(ResumePL)
         } else {
             setResume(ResumeEN)
@@ -58,20 +58,20 @@ const About = props => {
 
     return (
         <>
-        <div className="about-info" id="about" ref={ref}>
-            <h1 className="about-info-header" ref={e => aboutHeaderRef = e}>{props.t("header.about", { framework: "react-i18next" })}</h1>
-            <p className="about-info-content" ref={e => aboutContentRef = e}>{props.t("aboutme.content", { framework: "react-i18next" })}
-                <a
-                    className="about-resume-link"
-                    href={resume}
-                    download={`WojciechKubiakCV_${props.lang.toUpperCase()}.pdf`}
-                >
-                    {props.t("here.text", { framework: "react-i18next" })}
-                </a>
+            <div className="about-info" id="about" ref={ref}>
+                <h1 className="about-info-header" ref={e => aboutHeaderRef = e}>{props.t("header.about", { framework: "react-i18next" })}</h1>
+                <p className="about-info-content" ref={e => aboutContentRef = e}>{props.t("aboutme.content", { framework: "react-i18next" })}
+                    <a
+                        className="about-resume-link"
+                        href={resume}
+                        download={`WojciechKubiakCV_${props.lang.toUpperCase()}.pdf`}
+                    >
+                        {props.t("here.text", { framework: "react-i18next" })}
+                    </a>
                 .
             </p>
-            <div className="projects-mnt" id="projects" ref={props.projectsRef}></div>
-        </div>
+                <div className="projects-mnt" id="projects" ref={props.projectsRef}></div>
+            </div>
         </>
     )
 }

@@ -10,6 +10,8 @@ import SQL from "./../../images/skills/white_empty_sql.png";
 import NodeJS from "./../../images/skills/white_empty_nodejs.webp";
 import ReactJS from "./../../images/skills/white_empty_react.webp";
 import Typescript from "./../../images/skills/white_empty_typescript.webp";
+import SubinfoBg1 from "./../../images/projinfo.png";
+import SubinfoBg2 from "./../../images/projinfo2.png";
 import Git from "./../../images/git.png"
 
 const Projects = props => {
@@ -96,9 +98,10 @@ const Projects = props => {
             <div className="projects-header" ref={e => projectsHeader = e}><h1>{props.t("header.projects", { framework: "react-i18next" })}</h1></div>
             <div className="projects-data-container">
                 <div className="projects-data" ref={e => projectsFirst = e}>
-                    <div className="projects-img-container" onClick={() => showHandler(setShowFirstInfo)}>
+                    <div className="projects-img-container">
                         {showFirstInfo && (
                             <div className="projects-over-info">
+                                {showFirstInfo && (<button style={{position: "absolute", height: "25px", width: "25px", outline: "none", right: "5px", top: "5px", backgroundColor: "transparent", border: "none", color: "rgba(255, 255, 255, .8)", zIndex: "2000"}} onClick={() => hideHandler(setShowFirstInfo)}>X</button>)}
                                 <div className="projects-over-info-git">
                                 <a href="https://github.com/wojciechkubiak/opqn-web"><img src={Git} alt="git"/></a>
                                 </div>
@@ -112,16 +115,16 @@ const Projects = props => {
                         )}
                         <span className="helper"></span><img alt="alt" className="projects-img" src={projects[0].img} />
                     </div>
-                    <div className="projects-info">
-                    {showFirstInfo && (<button style={{position: "absolute", height: "25px", width: "25px", right: "5px", top: "5px", backgroundColor: "transparent", border: "none", color: "rgba(255, 255, 255, .8)", zIndex: "2000"}} onClick={() => hideHandler(setShowFirstInfo)}>X</button>)}
+                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg2})`}} onMouseOver={() => showHandler(setShowFirstInfo)}>
                         <h2>{projects[0].header}</h2>
                         <p>{projects[0].body}</p>
                     </div>
                 </div>
                 <div className="projects-data" ref={e => projectsSecond = e}>
-                <div className="projects-img-container" onMouseOver={() => showHandler(setShowSecondInfo)} onClick={() => showHandler(setShowSecondInfo)}>
+                <div className="projects-img-container">
                         {showSecondInfo && (
                             <div className="projects-over-info">
+                                {showSecondInfo && (<button style={{position: "absolute", height: "25px", width: "25px", outline: "none", right: "5px", top: "5px", backgroundColor: "transparent", border: "none", color: "rgba(255, 255, 255, .8)", zIndex: "2000"}} onClick={() => hideHandler(setShowSecondInfo)}>X</button>)}
                                 <div className="projects-over-info-git">
                                 <a href="https://github.com/wojciechkubiak/obb-web"><img src={Git} alt="git"/></a>
                                 </div>
@@ -135,8 +138,7 @@ const Projects = props => {
                         )}
                         <span className="helper"></span><img alt="alt" className="projects-img" src={projects[1].img} />
                     </div>
-                    <div className="projects-info">
-                        {showSecondInfo && (<button style={{position: "absolute", height: "25px", width: "25px", right: "5px", top: "5px", backgroundColor: "transparent", border: "none", color: "rgba(255, 255, 255, .8)", zIndex: "2000"}} onClick={() => hideHandler(setShowSecondInfo)}>X</button>)}
+                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg1})`}} onMouseOver={() => showHandler(setShowSecondInfo)}>
                         <h2>{projects[1].header}</h2>
                         <p>{projects[1].body}</p>
                     </div>

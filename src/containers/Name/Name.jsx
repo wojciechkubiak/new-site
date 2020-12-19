@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useInView } from 'react-intersection-observer';
 import { isMobile } from 'react-device-detect';
 import { gsap } from "gsap";
@@ -13,19 +13,19 @@ const Name = props => {
     let headerRef = useRef(null);
 
     useEffect(() => {
-        if(inView) setAnimated(true);
-        if(inView && !isMobile) {
+        if (inView) setAnimated(true);
+        if (inView && !isMobile) {
             props.setNavbar(true, false, false, false, false)
         }
     }, [inView]);
 
     useEffect(() => {
-        if(animated) {
+        if (animated) {
             gsap.fromTo(
                 headerRef,
                 {
                     opacity: 0
-                }, 
+                },
                 {
                     duration: 1,
                     opacity: 1
