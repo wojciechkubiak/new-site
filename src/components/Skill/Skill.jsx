@@ -12,9 +12,9 @@ const Skill = (props) => {
     let rand = Math.round(Math.random() * 2);
     let randBoolean = Math.round(Math.random());
 
-    let style1 = { visibility: "hidden", opacity: 0, backgroundImage: `url(${Cloud1})` }
-    let style2 = { visibility: "hidden", opacity: 0, backgroundImage: `url(${Cloud2})` }
-    let style3 = { visibility: "hidden", opacity: 0, backgroundImage: `url(${Cloud3})` }
+    let style1 = {  backgroundImage: `url(${Cloud1})` }
+    let style2 = {   backgroundImage: `url(${Cloud2})` }
+    let style3 = { backgroundImage: `url(${Cloud3})` }
     let styleMobile1 = { backgroundImage: `url(${Cloud1})` }
     let styleMobile2 = { backgroundImage: `url(${Cloud2})` }
     let styleMobile3 = { backgroundImage: `url(${Cloud3})` }
@@ -96,9 +96,13 @@ const Skill = (props) => {
     return (
         <>
             <figure className="skill-figure" ref={e => skillRef = e}>
-                <img src={props.imgSrc} onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()} className="skill-img" />
+                <img src={props.imgSrc} 
+                // onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()} 
+                className="skill-img" />
                 <figcaption>
-                    <h3 onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()}>{props.name}</h3>
+                    <h3 
+                    // onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()}
+                    >{props.name}</h3>
                     <div className="skill-desc-container" ref={e => figcaptionRef = e} style={isMobile ? styleMobile() : style()}>
                         <div className="desc-container">
                             {props.skillDescription.map(element => {

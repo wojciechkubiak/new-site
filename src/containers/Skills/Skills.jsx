@@ -4,14 +4,14 @@ import { isMobile } from 'react-device-detect';
 import { gsap } from 'gsap';
 import "./Skills.scss";
 import Skill from "./../../components/Skill/Skill";
-import Angular from "./../../images/skills/white_empty_angular.png";
-import CSS from "./../../images/skills/white_empty_css.webp";
-import HTML5 from "./../../images/skills/white_empty_html.webp";
-import Javascript from "./../../images/skills/white_empty_js.webp";
-import SQL from "./../../images/skills/white_empty_sql.png";
-import NodeJS from "./../../images/skills/white_empty_nodejs.webp";
-import ReactJS from "./../../images/skills/white_empty_react.webp";
-import Typescript from "./../../images/skills/white_empty_typescript.webp";
+import Angular from "./../../images/skills/ng-purple.png";
+import CSS from "./../../images/skills/css-purple.png";
+import HTML5 from "./../../images/skills/html-purple.png";
+import Javascript from "./../../images/skills/js-purple.png";
+import SQL from "./../../images/skills/sql-purple.png";
+import NodeJS from "./../../images/skills/node-purple.png";
+import ReactJS from "./../../images/skills/react-purple.png";
+import Typescript from "./../../images/skills/ts-purple.png";
 
 
 const Skills = props => {
