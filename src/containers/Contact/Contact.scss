@@ -3,6 +3,35 @@
     src: local('Leaf'), url(./../../fonts/Leaf.otf) format('opentype');
 }
 
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
 .contact {
     height: auto;
     width: auto;
@@ -32,6 +61,11 @@
     font-size: 36px;
 }
 
+.contact-subheader-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 .contact-header {
     background-color: #8e8dbc;
     margin-bottom: 5% !important;
@@ -126,8 +160,48 @@ figure > h4 {
     color: rgba(0, 0, 0, .8);
     background-color: white !important;
     font-size: 16px;
-    background-image: url("./../../images/icons/send.png");
+    background-image: url("../../images/icons/send.png");
     background-size: 100%; /* To fill the dimensions of container (button), or */
+}
+
+.send-info {
+    color:rgba(0, 0, 0, .6);
+    text-align: center;
+    margin-top: 200px !important;
+    margin-bottom: 20px !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.send-info-sub {
+    color:rgba(0, 0, 0, .6);
+    text-align: center;
+    margin-bottom: 200px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.load-contact-form {
+    margin-top: 5% !important;
+    position: static;
+    width: 32px;
+    height: 32px;
+    padding: 8px !important;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    outline: none;
+    border: none !important;
+    color: rgba(0, 0, 0, .8);
+    background-color: white !important;
+    font-size: 16px;
+    background-image: url("../../images/icons/load.png");
+    background-size: 100%; /* To fill the dimensions of container (button), or */
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
 }
 
 .submit-contact-form:hover {
@@ -161,4 +235,19 @@ input:invalid, textarea:invalid {
         max-width: 50%;
         max-height: 50%;
     }
-  }
+
+    .contact-mail-mail, .contact-mail-subject, .contact-mail-content {
+        position: relative;
+        width: 90%;
+        border: 0 !important;
+        background-color: #ebebeb;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .6);
+        padding: 8px !important;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        border-radius: 5px !important;
+        font-size: 14px
+    }
+}

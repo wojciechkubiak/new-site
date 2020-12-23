@@ -30,7 +30,7 @@ const Skills = props => {
     }, {
         name: "ANGULAR",
         skill: Angular,
-        skillDesc: props.t("javascript.desc", { framework: "react-i18next" }),
+        skillDesc: props.t("angular.desc", { framework: "react-i18next" }),
     }, {
         name: "TYPESCRIPT",
         skill: Typescript,
@@ -48,7 +48,7 @@ const Skills = props => {
         skill: CSS,
         skillDesc: props.t("css.desc", { framework: "react-i18next" }),
     }];
-    const [threshold, setThreshold] = useState(0.4)
+    const [threshold, setThreshold] = useState(0.1)
     const refs = [];
     const [animated, setAnimated] = useState(false);
     const { ref, inView, entry } = useInView({

@@ -3,6 +3,7 @@ import "./Projects.scss";
 import { useInView } from 'react-intersection-observer';
 import { isMobile } from 'react-device-detect';
 import { gsap } from "gsap";
+import {AiOutlineInfoCircle} from "react-icons/ai";
 import ObbSys from "./../../images/1.png";
 import OpqnWeb from "./../../images/3.png";
 import Javascript from "./../../images/skills/white_empty_js.webp";
@@ -115,8 +116,8 @@ const Projects = props => {
                         )}
                         <span className="helper"></span><img alt="alt" className="projects-img" src={projects[0].img} />
                     </div>
-                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg2})`}} onMouseOver={() => showHandler(setShowFirstInfo)}>
-                        <h2>{projects[0].header}</h2>
+                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg2})`}}>
+                        <h2>{projects[0].header}<AiOutlineInfoCircle onClick={() => showHandler(setShowFirstInfo)}/></h2>
                         <p>{projects[0].body}</p>
                     </div>
                 </div>
@@ -138,8 +139,8 @@ const Projects = props => {
                         )}
                         <span className="helper"></span><img alt="alt" className="projects-img" src={projects[1].img} />
                     </div>
-                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg1})`}} onMouseOver={() => showHandler(setShowSecondInfo)}>
-                        <h2>{projects[1].header}</h2>
+                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg1})`}}>
+                        <h2>{projects[1].header}<AiOutlineInfoCircle onClick={() => showHandler(setShowSecondInfo)}/></h2>
                         <p>{projects[1].body}</p>
                     </div>
                 </div>

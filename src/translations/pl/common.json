@@ -13,7 +13,7 @@
         "header": "O MNIE",
         "greeting": "Cześć!",
         "mynameis": "Nazywam się",
-        "content": "Jestem studentem Informatyki Stosowanej i Systemów Pomiarowych, UWr. Moją pasją jest tworzenie miłych dla oka aplikacji webowych z użyciem nowoczesnych technologii. Pasja ta została zapoczątkowana podczas licznych indywidualnych i studenckich projektów. W każdym z nich wykazałem się kreatywnością, konsekwencją oraz dbałością o jakość aplikacji i kodu. Podczas moich studiów miałem również okazję uczestniczyć w praktyce oraz stażu programistycznym. Podczas ich trwania nauczyłem się specyfiki pracy w systemie SCRUM, komunikacji z klientem podczas otrzymywania zlecenia oraz jak programować z zachowaniem nowoczesnych standardów. Więcej informacji "
+        "content": "Jestem studentem Informatyki Stosowanej i Systemów Pomiarowych, UWr. Moją pasją jest tworzenie miłych dla oka aplikacji webowych z użyciem nowoczesnych technologii. Pasja ta została zapoczątkowana podczas licznych indywidualnych i studenckich projektów. W każdym z nich wykazałem się kreatywnością, konsekwencją oraz dbałością o jakość aplikacji i kodu. Podczas moich studiów miałem również okazję uczestniczyć w praktyce oraz stażu programistycznym. Podczas ich trwania nauczyłem się specyfiki pracy w systemie SCRUM, komunikacji z klientem podczas otrzymywania zlecenia oraz jak programować z zachowaniem nowoczesnych standardów. Aktualnie pracuję w ACN, gdzie tworzę aplikacje oraz skrypty automatyzujące przy użyciu technologii opartych na jęzuku JavaScript. \nWięcej informacji "
     },
     "skills": {
         "header": "TECHNOLOGIE"
@@ -44,8 +44,11 @@
     "typescript": {
         "desc": "Konwersja ES6 na Typescript,React Typescript"
     },
+    "angular": {
+        "desc": "Znajomość składni,Podstawowe funkcjonalności,Zarządzenie stanem"
+    },
     "reactjs": {
-        "desc": "React Hooks,Programowanie Funkcyjne,Programowanie Obiektowe"
+        "desc": "React Hooks,Programowanie Funkcyjne,Programowanie Obiektowe,Integracja z bibliotekami"
     },
     "nodejs": {
         "desc": "ExpressJS,REST API,MVC,Sequelize"
@@ -60,7 +63,7 @@
         "desc": "Użytkowanie,Edycja"
     },
     "postgres": {
-        "desc": "Podstawy,T-SQL"
+        "desc": "Zaaw. składnia,MySQL / MSSQL / Oracle,T-SQL"
     },
     "download": {
         "cv": "CV"

@@ -13,7 +13,7 @@
         "header": "ABOUT ME",
         "greeting": "Hi!",
         "mynameis": "My name is",
-        "content": "I'm student of Computer Science and Measuring Systems at the University of Wroclaw. I am passionate about creating nice looking web applications using modern technologies. I got into it during numerous individual and university projects. In each of them I showed creativity, consistency and attention to the quality of the application and code. During my studies, I also had the opportunity to participate in practices and programming internships. During them I learned how to work in the SCRUM system, how to communicate with client while receiving an application creation order and how to program with modern standards. More information "
+        "content": "I'm student of Computer Science and Measuring Systems at the University of Wroclaw. I am passionate about creating nice looking web applications using modern technologies. I got into it during numerous individual and university projects. In each of them I showed creativity, consistency and attention to the quality of the application and code. During my studies, I also had the opportunity to participate in practices and programming internships. During them I learned how to work in the SCRUM system, how to communicate with client while receiving an application creation order and how to program with modern standards. Currently working at the ACN, where my responsibility is to create applications and automation scripts using JavaScript. More information "
     },
     "skills": {
         "header": "SKILLS"
@@ -42,10 +42,13 @@
         "desc": "ES6+,DOM Manipulation,Functional Programming,Objective Programming,Async"
     },
     "typescript": {
-        "desc": "ES6 into Typescript conversion,React implementation"
+        "desc": "ES6 into Typescript conversion,Angular implementation,React implementation"
+    },
+    "angular": {
+        "desc": "Syntax,Simple app implementation,State management"
     },
     "reactjs": {
-        "desc": "React Hooks,Functional Programming,Objective Programming"
+        "desc": "React Hooks,Functional Programming,Objective Programming,External libraries implementation"
     },
     "nodejs": {
         "desc": "ExpressJS,REST API,MVC,Sequelize"
@@ -60,7 +63,7 @@
         "desc": "Using,Editing"
     },
     "postgres": {
-        "desc": "Fundamentals,T-SQL"
+        "desc": "Advanced syntax,MySQL / MSSQL / Oracle,T-SQL"
     },
     "download": {
         "cv": "RESUME"
