@@ -19,6 +19,7 @@ const About = props => {
 
     useEffect(() => {
         if (inView) setAnimated(true);
+        if (inView && isMobile) props.setShowMainBtn(false);
         if (!isMobile) props.navbarDarkHandler(inView);
     }, [inView]);
 
@@ -58,7 +59,8 @@ const About = props => {
 
     return (
         <>
-            <div className="about-info" id="about" ref={ref}>
+            <div className="about-info" id="about" ref={ref} >
+                <div ref={props.aboutRef}>
                 <h1 className="about-info-header" ref={e => aboutHeaderRef = e}>{props.t("header.about", { framework: "react-i18next" })}</h1>
                 <p className="about-info-content" ref={e => aboutContentRef = e}>{props.t("aboutme.content", { framework: "react-i18next" })}
                     <a
@@ -69,8 +71,9 @@ const About = props => {
                         {props.t("here.text", { framework: "react-i18next" })}
                     </a>
                 .
-            </p>
+                </p>
                 <div className="projects-mnt" id="projects" ref={props.projectsRef}></div>
+                </div>               
             </div>
         </>
     )

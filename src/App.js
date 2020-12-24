@@ -15,7 +15,7 @@ const App = props => {
   const { t, i18n } = props;
   const [lang, setLang] = useState("en");
   const [showLangOptions, setShowLangOptions] = useState(false);
-
+  const [showMainBtn, setShowMainBtn] = useState(true);
   const [mainStyle, setMainStyle] = useState("navbar-item");
   const [aboutStyle, setAboutStyle] = useState("navbar-item");
   const [projectsStyle, setProjectsStyle] = useState("navbar-item");
@@ -33,6 +33,10 @@ const App = props => {
     ref.current.scrollIntoView();
     setNavbar(main, about, projects, skills, contact);
   };
+
+  const moveToAbout = () => {
+    aboutRef.current.scrollIntoView();
+  }
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -82,8 +86,8 @@ const App = props => {
       <div className="language">
         <button onClick={() => langHandler()} className="language-btn-show"><img alt="alt" src={flag} /></button>
       </div>
-      <Name mainRef={mainRef} setNavbar={setNavbar} t={t} />
-      <About projectsRef={projectsRef} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang} />
+      <Name mainRef={mainRef}  aboutMoveHandler={moveToAbout} showMainBtn={showMainBtn} setNavbar={setNavbar} t={t} />
+      <About aboutRef={aboutRef} projectsRef={projectsRef} setShowMainBtn={setShowMainBtn} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang} />
       <Projects skillsRef={skillsRef} setNavbar={setNavbar} t={t} />
       <Skills contactRef={contactRef} setNavbar={setNavbar} t={t} />
       <Contact setNavbar={setNavbar} t={t} />

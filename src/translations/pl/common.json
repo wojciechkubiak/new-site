@@ -33,7 +33,9 @@
         "phone": "Zadzwoń:",
         "mail": "Email",
         "subject": "Temat",
-        "message": "Wiadomość"
+        "message": "Wiadomość",
+        "success": "Wysłano",
+        "subsuccess": "Odpowiem najszybciej jak to tylko możliwe"
     },
     "footer": {
         "text": "Strona stworzona przez"

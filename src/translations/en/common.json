@@ -33,7 +33,9 @@
         "phone": "Call:",
         "mail": "Mail",
         "subject": "Subject",
-        "message": "Message"
+        "message": "Message",
+        "success": "Email send",
+        "subsuccess": "I will contact you ASAP"
     },
     "footer": {
         "text": "Created by"
