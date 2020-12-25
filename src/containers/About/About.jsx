@@ -61,6 +61,7 @@ const About = props => {
         <>
             <div className="about-info" id="about" ref={ref} >
                 <div ref={props.aboutRef}>
+                    {/* TODO: header flashing if scrolled fast - turn off anim? */}
                 <h1 className="about-info-header" ref={e => aboutHeaderRef = e}>{props.t("header.about", { framework: "react-i18next" })}</h1>
                 <p className="about-info-content" ref={e => aboutContentRef = e}>{props.t("aboutme.content", { framework: "react-i18next" })}
                     <a

@@ -6,11 +6,11 @@ import { gsap } from "gsap";
 import {AiOutlineInfoCircle} from "react-icons/ai";
 import ObbSys from "./../../images/1.png";
 import OpqnWeb from "./../../images/3.png";
-import Javascript from "./../../images/skills/white_empty_js.webp";
-import SQL from "./../../images/skills/white_empty_sql.png";
-import NodeJS from "./../../images/skills/white_empty_nodejs.webp";
-import ReactJS from "./../../images/skills/white_empty_react.webp";
-import Typescript from "./../../images/skills/white_empty_typescript.webp";
+import Javascript from "./../../images/skills/js-white.webp";
+import SQL from "./../../images/skills/sql-white.png";
+import NodeJS from "./../../images/skills/node-white.webp";
+import ReactJS from "./../../images/skills/react-white.webp";
+import Typescript from "./../../images/skills/ts-white.webp";
 import SubinfoBg1 from "./../../images/projinfo.png";
 import SubinfoBg2 from "./../../images/projinfo2.png";
 import Git from "./../../images/git.png"
@@ -116,7 +116,7 @@ const Projects = props => {
                         )}
                         <span className="helper"></span><img alt="alt" className="projects-img" src={projects[0].img} />
                     </div>
-                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg2})`}}>
+                    <div className="projects-info">
                         <h2>{projects[0].header}<AiOutlineInfoCircle onClick={() => showHandler(setShowFirstInfo)}/></h2>
                         <p>{projects[0].body}</p>
                     </div>
@@ -139,7 +139,8 @@ const Projects = props => {
                         )}
                         <span className="helper"></span><img alt="alt" className="projects-img" src={projects[1].img} />
                     </div>
-                    <div className="projects-info" style={{backgroundImage: `url(${SubinfoBg1})`}}>
+                    <div className="projects-info" 
+                    >
                         <h2>{projects[1].header}<AiOutlineInfoCircle onClick={() => showHandler(setShowSecondInfo)}/></h2>
                         <p>{projects[1].body}</p>
                     </div>

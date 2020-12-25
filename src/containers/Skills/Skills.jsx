@@ -4,14 +4,14 @@ import { isMobile } from 'react-device-detect';
 import { gsap } from 'gsap';
 import "./Skills.scss";
 import Skill from "./../../components/Skill/Skill";
-import Angular from "./../../images/skills/ng-purple.png";
-import CSS from "./../../images/skills/css-purple.png";
-import HTML5 from "./../../images/skills/html-purple.png";
-import Javascript from "./../../images/skills/js-purple.png";
-import SQL from "./../../images/skills/sql-purple.png";
-import NodeJS from "./../../images/skills/node-purple.png";
-import ReactJS from "./../../images/skills/react-purple.png";
-import Typescript from "./../../images/skills/ts-purple.png";
+import Angular from "./../../images/skills/ng-white.png";
+import CSS from "./../../images/skills/css-white.webp";
+import HTML5 from "./../../images/skills/html-white.webp";
+import Javascript from "./../../images/skills/js-white.webp";
+import SQL from "./../../images/skills/sql-white.png";
+import NodeJS from "./../../images/skills/node-white.webp";
+import ReactJS from "./../../images/skills/react-white.webp";
+import Typescript from "./../../images/skills/ts-white.webp";
 
 
 const Skills = props => {

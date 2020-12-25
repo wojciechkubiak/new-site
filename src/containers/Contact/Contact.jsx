@@ -143,8 +143,8 @@ const Contact = props => {
                 {!send && <button className={showSend ? "submit-contact-form" : "load-contact-form"} type="submit"></button>   }  
                 {send && 
                 <>
-                <h1 className="send-info">{props.t("contact.success", { framework: "react-i18next" })} <FaRegHeart/></h1>
-                <h3 className="send-info-sub">{props.t("contact.subsuccess", { framework: "react-i18next" })}</h3>
+                    <h1 className="send-info">{props.t("contact.success", { framework: "react-i18next" })} <FaRegHeart/></h1>
+                    <h3 className="send-info-sub">{props.t("contact.subsuccess", { framework: "react-i18next" })}</h3>
                 </>
                 }
             </form>

@@ -103,7 +103,9 @@ const Skill = (props) => {
                     <h3 
                     // onMouseOver={() => showFigcatpion()} onMouseOut={() => hideFigcatpion()}
                     >{props.name}</h3>
-                    <div className="skill-desc-container" ref={e => figcaptionRef = e} style={isMobile ? styleMobile() : style()}>
+                    <div className="skill-desc-container" ref={e => figcaptionRef = e} 
+                    // style={isMobile ? styleMobile() : style()}
+                    >
                         <div className="desc-container">
                             {props.skillDescription.map(element => {
                                 return <>
