@@ -4,7 +4,7 @@ import { isMobile } from 'react-device-detect';
 import { gsap } from 'gsap';
 import "./Skills.scss";
 import Skill from "./../../components/Skill/Skill";
-import Angular from "./../../images/skills/ng-white.png";
+import Python from "./../../images/skills/py-white.png";
 import CSS from "./../../images/skills/css-white.webp";
 import HTML5 from "./../../images/skills/html-white.webp";
 import Javascript from "./../../images/skills/js-white.webp";
@@ -28,13 +28,13 @@ const Skills = props => {
         skill: NodeJS,
         skillDesc: props.t("nodejs.desc", { framework: "react-i18next" }),
     }, {
-        name: "ANGULAR",
-        skill: Angular,
-        skillDesc: props.t("angular.desc", { framework: "react-i18next" }),
-    }, {
         name: "TYPESCRIPT",
         skill: Typescript,
         skillDesc: props.t("typescript.desc", { framework: "react-i18next" }),
+    }, {
+        name: "PYTHON",
+        skill: Python,
+        skillDesc: props.t("python.desc", { framework: "react-i18next" }),
     }, {
         name: "SQL",
         skill: SQL,

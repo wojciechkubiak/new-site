@@ -28,7 +28,7 @@ const Projects = props => {
     }];
     const [animated, setAnimated] = useState(false);
     const { ref, inView, entry } = useInView({
-        threshold: .4,
+        threshold: .3,
     });
 
     const showHandler = (f,) => f(true);

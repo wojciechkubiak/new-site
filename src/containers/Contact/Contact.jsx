@@ -21,7 +21,7 @@ const Contact = props => {
     const [animated, setAnimated] = useState(false);
     const [inputDisabled, setInputDisabled] = useState(false);
     const { ref, inView, entry } = useInView({
-        threshold: .5,
+        threshold: .3,
     });
 
     const styleSend = { backgroundImage: `url(${bgSend})` };

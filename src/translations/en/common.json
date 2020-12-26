@@ -46,8 +46,8 @@
     "typescript": {
         "desc": "ES6 into Typescript conversion,Angular implementation,React implementation"
     },
-    "angular": {
-        "desc": "Syntax,Simple app implementation,State management"
+    "python": {
+        "desc": "Basic syntax,Basic functionalities,Implementation of the simple web apps"
     },
     "reactjs": {
         "desc": "React Hooks,Functional Programming,Objective Programming,External libraries implementation"

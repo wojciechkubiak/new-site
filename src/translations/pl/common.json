@@ -46,8 +46,8 @@
     "typescript": {
         "desc": "Konwersja ES6 na Typescript,React Typescript"
     },
-    "angular": {
-        "desc": "Znajomość składni,Podstawowe funkcjonalności,Zarządzenie stanem"
+    "python": {
+        "desc": "Podstawowa znajomość składni,Podstawowe funkcjonalności,Proste aplikacje webowe"
     },
     "reactjs": {
         "desc": "React Hooks,Programowanie Funkcyjne,Programowanie Obiektowe,Integracja z bibliotekami"
