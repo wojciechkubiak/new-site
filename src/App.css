@@ -47,14 +47,19 @@
 }
 
 .navbar-dark {
-    background: url("./images/navbar.png") no-repeat center center; 
+  background: url("./images/navbar.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .navbar-item:hover {
-    border: 2px solid#8e8dbc;
+  border: 2px solid#8e8dbca4;
+  background: url("./images/active.png") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .navbar-item-active {
@@ -67,9 +72,10 @@
 }
 
 .language-btn-show > img {
-    -webkit-filter: drop-shadow(0px -1px 3px #000000);
-        filter: drop-shadow(0px -1px 3px #000000);
+    -webkit-filter: drop-shadow(0px -1px 1px #000000);
+        filter: drop-shadow(0px -1px 1px #000000);
 }
+
 .navbar > button {
     outline: none;
     background-color: transparent;

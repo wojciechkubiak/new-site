@@ -73,7 +73,7 @@ const About = props => {
                     </a>
                 .
                 </p>
-                <div className="projects-mnt" id="projects" ref={props.projectsRef}></div>
+                <div className="projects-mnt" id="projects"></div>
                 </div>               
             </div>
         </>

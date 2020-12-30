@@ -70,6 +70,7 @@ const Skills = props => {
 
     return (
         <div className="skills" ref={ref}>
+            <div ref={props.skillsRef}></div>
             <div className="skills-header"><h1>{props.t("header.skills", { framework: "react-i18next" })}</h1></div>
             <div className="skills-container">
                 {
@@ -82,7 +83,7 @@ const Skills = props => {
                     })
                 }
             </div>
-            <div className="skills-mnt" id="contact" ref={props.contactRef}></div>
+            <div className="skills-mnt" id="contact"></div>
         </div>
     )
 }

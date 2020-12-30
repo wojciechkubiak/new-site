@@ -96,6 +96,7 @@ const Projects = props => {
 
     return (
         <div className="projects" ref={ref}>
+            <div ref={props.projectsRef}></div>
             <div className="projects-header" ref={e => projectsHeader = e}><h1>{props.t("header.projects", { framework: "react-i18next" })}</h1></div>
             <div className="projects-data-container">
                 <div className="projects-data" ref={e => projectsFirst = e}>
@@ -147,7 +148,7 @@ const Projects = props => {
                 </div>
             </div>
             <h2 className="projects-subheader" ref={e => subinfo = e}>... {props.t("subinfo.content", { framework: "react-i18next" })}</h2>
-            <div ref={props.skillsRef} className="projects-mnt-bt" id="skills"></div>
+            <div className="projects-mnt-bt" id="skills"></div>
         </div>
     )
 }

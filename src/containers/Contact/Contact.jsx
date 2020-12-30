@@ -113,6 +113,7 @@ const Contact = props => {
 
     return (
         <div className="contact" ref={ref}>
+            <div ref={props.contactRef}></div>
             <div className="contact-header">
                 <h1 className="contact-header-text" ref={e => contactHeader = e}>{props.t("contact.box", { framework: "react-i18next" })}</h1>
                 <h3 className="contact-subheader-text"ref={e => contactSubHeader = e}>{props.t("contact.firstLine", { framework: "react-i18next" })}</h3>

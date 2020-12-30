@@ -87,10 +87,10 @@ const App = props => {
         <button onClick={() => langHandler()} className="language-btn-show"><img alt="alt" src={flag} /></button>
       </div>
       <Name mainRef={mainRef}  aboutMoveHandler={moveToAbout} showMainBtn={showMainBtn} setNavbar={setNavbar} t={t} />
-      <About aboutRef={aboutRef} projectsRef={projectsRef} setShowMainBtn={setShowMainBtn} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang} />
-      <Projects skillsRef={skillsRef} setNavbar={setNavbar} t={t} />
-      <Skills contactRef={contactRef} setNavbar={setNavbar} t={t} />
-      <Contact setNavbar={setNavbar} t={t} />
+      <About aboutRef={aboutRef}  setShowMainBtn={setShowMainBtn} navbarDarkHandler={navbarDarkHandler} t={t} lang={lang} />
+      <Projects projectsRef={projectsRef} setNavbar={setNavbar} t={t} />
+      <Skills skillsRef={skillsRef} setNavbar={setNavbar} t={t} />
+      <Contact  contactRef={contactRef} setNavbar={setNavbar} t={t} />
       <Footer t={t} />
       {!isMobile
         &&
