@@ -1,5 +1,6 @@
 .skills {
-    background-color:#696da3;
+    background: #4c5a92;
+background: linear-gradient(180deg, rgba(76,90,146,1) 0%, rgba(131,148,198,1) 100%);
     position: relative;
 }
 
@@ -12,7 +13,7 @@
     // -o-background-size: cover;
     // background-size: cover;
     letter-spacing: 5px;
-    background-color: #696da3;
+    // background-color:#765664;
     color: white
 }
 
@@ -33,7 +34,8 @@
     position: absolute;
     background-image: url("./../../images/projects-mnt-cn.png");
     bottom: 0px !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 0 !important;    
+    visibility: hidden;
 }
 
 .skill-img {

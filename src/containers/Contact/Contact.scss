@@ -36,7 +36,8 @@
     height: auto;
     width: auto;
     position: relative;
-    background-color:#8e8dbc;
+    background: rgb(131,148,198);
+background: linear-gradient(180deg, rgba(131,148,198,1) 0%, rgba(255,255,255,1) 100%);
     padding-top: 5% !important;
     padding-bottom: 5% !important;
 }
@@ -67,7 +68,7 @@
     letter-spacing: 1px;
 }
 .contact-header {
-    background-color: #8e8dbc;
+    // background-color:#AE828C;
     margin-bottom: 5% !important;
     padding: 50px !important;
 }
