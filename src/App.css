@@ -2,23 +2,26 @@
     border: 0 !important;
     outline: none;
     right: 25px;
-    bottom: 25px;
+    top: 25px;
     position: fixed;
     z-index: 2000;
+    transition-duration: 1s;
 }
 
 .language-btn-show {
     font-size: 16px;
     color: white;
-    width: 60px;
+    width: 50px;
     padding: 2px !important;
     background-color:transparent;
     border-bottom: none !important;
-    opacity: 1
+    opacity: 1;
+    transition-duration: 1s;
 }
 
 .language-btn-show > img {
     max-width: 100% !important;
+    transition-duration: 1s;
 }
 
 .language-btn-pick {
@@ -35,6 +38,7 @@
     top: 50%;
     display: block;
     transform: translate(0%, -50%);
+    transition-duration: 1s;
 }
 
 .navbar-item {
@@ -48,33 +52,38 @@
 }
 
 .navbar-dark {
-  background: url("./images/navbar.png") no-repeat center center; 
+  /* background: url("./images/navbar.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
+  background-color: rgba(52, 60, 104, .8);
+  transition-duration: 1s;
+  border-radius: 24px;
 }
+
 .navbar-item:hover {
-  border: 2px solid#8e8dbca4;
-  background: url("./images/active.png") no-repeat center center; 
+  border: 2px solid rgba(255, 255, 255, .5);
+  /* background: url("./images/active.png") no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .navbar-item-active {
     /* border: 2px solid #8e8dbc; */
-    background: url("./images/active.png") no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    /* background: url("./images/active.png") no-repeat center center;  */
+  /* -webkit-background-size: cover; */
+  /* -moz-background-size: cover; */
+  /* -o-background-size: cover; */
+  /* background-size: cover; */
+  border: 2px solid white;
 }
 
 .language-btn-show > img {
-    -webkit-filter: drop-shadow(0px -1px 1px #000000);
-        filter: drop-shadow(0px -1px 1px #000000);
+    -webkit-filter: drop-shadow(1px 1px 1px #333333);
+    filter: drop-shadow(1px 1px 1px #292930);
 }
 
 .navbar > button {
@@ -87,6 +96,7 @@
 }
 
 .navbar-dot {
+    background-color: white !important;
     position: absolute;
     width: 4px;
     height: 4px;
@@ -111,11 +121,12 @@
     .language-btn-show, .language-btn-pick {
         border: 0 !important;
         outline: none;
-        top: 5px;
+        top: 2px;
         left: 5px;
         position: fixed;
         z-index: 2000;
-        height: 55px
+        height: 55px;
+        transition-duration: 1s;
     }
     /* .App {
         background-color: #3e3b57;

@@ -55,15 +55,19 @@
 }
 
 .projects-mnt-bt {
-    min-height: 40px;
-    min-width: 100%;
+    min-height: 90px;
+    min-width: 560px;
     position: absolute;
-    background-image: url("./../../images/projects-mnt-bt.png");
+    background-image: url("./../../images/divider3.webp");
+    background-size: 100% 100%;
     bottom: 0px !important;
     margin-bottom: 0 !important;
     margin-left: 0 !important;
     padding-left: 0 !important;
-    visibility: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    // top: 50px !important
+    // visibility: hidden;
 }
 
 .projects-data {
@@ -173,11 +177,16 @@
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 30px !important;
+    margin-bottom: 100px !important;
     opacity: 0;
 }
 
 @media only screen and (max-width: 890px) {
+    .projects-mnt-bt {
+        min-height: 50px;
+        min-width: 311px;
+    }
+
     .projects-data {
         width: 90%;
         left: 0%;

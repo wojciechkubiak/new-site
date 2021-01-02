@@ -11,7 +11,7 @@ const About = props => {
     const [resume, setResume] = useState(ResumeEN);
     const [animated, setAnimated] = useState(false);
     const { ref, inView, entry } = useInView({
-        threshold: .5,
+        threshold: 1,
     });
 
     let aboutHeaderRef = useRef(null);
@@ -21,33 +21,38 @@ const About = props => {
         if (inView) setAnimated(true);
         if (inView && isMobile) props.setShowMainBtn(false);
         if (!isMobile) props.navbarDarkHandler(inView);
+        if (inView && !isMobile) {
+            props.navbarDarkHandler(true);
+        } else {
+            props.navbarDarkHandler(false);
+        }
     }, [inView]);
 
-    useEffect(() => {
-        if (animated) {
-            gsap.fromTo(
-                aboutHeaderRef,
-                {
-                    opacity: 0
-                },
-                {
-                    duration: 1,
-                    opacity: 1
-                }
-            );
+    // useEffect(() => {
+    //     if (animated) {
+    //         gsap.fromTo(
+    //             aboutHeaderRef,
+    //             {
+    //                 opacity: 0
+    //             },
+    //             {
+    //                 duration: 1,
+    //                 opacity: 1
+    //             }
+    //         );
 
-            gsap.fromTo(
-                aboutContentRef,
-                {
-                    opacity: 0
-                },
-                {
-                    duration: 1.5,
-                    opacity: 1
-                }
-            )
-        }
-    }, [animated]);
+    //         gsap.fromTo(
+    //             aboutContentRef,
+    //             {
+    //                 opacity: 0
+    //             },
+    //             {
+    //                 duration: 1.5,
+    //                 opacity: 1
+    //             }
+    //         )
+    //     }
+    // }, [animated]);
 
     useEffect(() => {
         if (props.lang === "pl") {
